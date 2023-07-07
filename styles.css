@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Global Rules */
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NFT card */
+.nft-card {
+    width: 90%;
+    max-width: 375px;
+    margin: 5em auto;
+    padding: 1.2em;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 1em;
+    box-shadow: 0 1.5em 5px 1em hsla(217, 54%, 5%, 20%), 
+                0 1.5em 5px 2em hsla(217, 54%, 5%, 10%);
+}
+
+.image-section {
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.image-section svg {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-section:hover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 50%);
+}
+
+.image-section:hover svg {
+    display: block;
+}
+
+.nft__title {
+    color: hsl(0, 0%, 100%);
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+.nft__title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.nft__description {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.nft__details {
+    margin: 1em auto;
+    font-size: 0.9rem;
+}
+
+.nft__price__icon,
+.nft__days__icon {
+    margin-right: 0.5em;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.nft__price__quantity,
+.nft__days__quantity {
+    width: 100%;
+}
+
+.nft__price__quantity {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.nft__seperator-line {
+    margin: 1em auto;
+    background-color: hsl(215, 32%, 27%);
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+}
+
+.nft__creator {
+    display: flex;
+    align-items: center;
+}
+
+.creator__image {
+    width: 2em;
+    margin-right: 1em;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+}
+
+.creator__text {
+    font-size: 0.9rem;
+}
+
+.creator__name {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.creator__name:hover {
+    color: hsl(178, 100%, 50%);
+}
